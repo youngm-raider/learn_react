@@ -2,7 +2,7 @@ type PlayerCardProps = {
     name: string;
     level: number;
     characterClass: string;
-    title?: string | undefined;
+    title?: string;
 }
 
 const PlayerCard = ({ name, level, characterClass, title = "Guild Member" }: PlayerCardProps) => {
