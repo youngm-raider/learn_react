@@ -2,10 +2,10 @@ type PlayerCardProps = {
     name: string;
     level: number;
     characterClass: string;
-    title?: string;
+    title?: string | undefined;
 }
 
-const PlayerCard = ({ name, level, characterClass, title }: PlayerCardProps) => {
+const PlayerCard = ({ name, level, characterClass, title = "Guild Member" }: PlayerCardProps) => {
     return (
         <div className="player-card">
             <h2>{name}</h2>
