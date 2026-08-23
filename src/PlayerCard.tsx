@@ -11,7 +11,7 @@ const PlayerCard = ({ name, level, characterClass, title = "Guild Member" }: Pla
             <h2>{name}</h2>
             <p>Level: {level}</p>
             <p>Class: {characterClass}</p>
-            {title && <p>Title: {title}</p>}
+            <p>Title: {title}</p>
         </div>
     );
 }
