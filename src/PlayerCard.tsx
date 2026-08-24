@@ -3,17 +3,17 @@ type PlayerCardProps = {
     level: number;
     characterClass: string;
     title?: string;
-    onSelect: () => void;
+    handleSelect: (name: string) => void;
 }
 
-const PlayerCard = ({ name, level, characterClass, title = "Guild Member", onSelect }: PlayerCardProps) => {
+const PlayerCard = ({ name, level, characterClass, title = "Guild Member", handleSelect }: PlayerCardProps) => {
     return (
         <div className="player-card">
             <h2>{name}</h2>
             <p>Level: {level}</p>
             <p>Class: {characterClass}</p>
             <p>Title: {title}</p>
-            <button onClick={onSelect}>Select</button>
+            <button onClick={() => handleSelect(name)}>Select Player</button>
         </div>
     );
 }
