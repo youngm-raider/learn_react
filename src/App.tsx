@@ -9,8 +9,8 @@ function App() {
 
    return (
     <>
-    <PlayerCard name="Alice" level={5} characterClass="Warrior" title="Guild Leader" handleSelect={handleSelect} />
-    <PlayerCard name="Bob" level={10} characterClass="Mage" handleSelect={handleSelect} />
+    <PlayerCard name="Alice" level={5} characterClass="Warrior" title="Guild Leader" onSelect={handleSelect} />
+    <PlayerCard name="Bob" level={10} characterClass="Mage" onSelect={handleSelect} />
     </>
   )
 }
