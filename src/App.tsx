@@ -8,14 +8,22 @@ function App() {
     console.log(`Player selected: ${name}`);
   }
 
+  const handleSave = () => {
+    console.log('Game saved!');
+  }
+
+  const handleLoad = () => {
+    console.log('Game loaded!');
+  }
+
    return (
     <div>
 
     <PlayerCard name="Alice" level={5} characterClass="Warrior" title="Guild Leader" onSelect={handleSelect} />
     <PlayerCard name="Bob" level={10} characterClass="Mage" onSelect={handleSelect} />
-    <br />
-    <ActionButton label="Save Game" onAction={() => console.log('Game saved!')} />
-    <ActionButton label="Load Game" onAction={() => console.log('Game loaded!')} />
+    <br />s
+    <ActionButton label="Save Game" onAction={handleSave} />
+    <ActionButton label="Load Game" onAction={handleLoad} />
     <br />
     </div>
   )
