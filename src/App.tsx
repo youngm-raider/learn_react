@@ -29,8 +29,8 @@ function App() {
       <ActionButton label="Save Game" onAction={handleSave} />
       <ActionButton label="Load Game" onAction={handleLoad} />
     <br />
-      <ScoreButton points={5} onScore={() => handleScore(5)} />
-      <ScoreButton points={10} onScore={() => handleScore(10)} />
+      <ScoreButton points={5} onScore={handleScore} />
+      <ScoreButton points={10} onScore={handleScore} />
         
     </div>
   )
