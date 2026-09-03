@@ -1,7 +1,7 @@
 type RewardCardProps = {
     name: string;
     points: number;
-    onClaim(num: number): void;
+    onClaim: (num: number) => void;
 };
 
 const RewardCard = ({ name, points, onClaim }: RewardCardProps) => {
