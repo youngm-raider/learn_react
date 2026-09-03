@@ -28,8 +28,8 @@ function App() {
 
    return (
     <div>
-      <PlayerCard name="Alice" level={5} characterClass="Warrior" title="Guild Leader" isFeatured onSelect={handleSelect} />
-      <PlayerCard name="Bob" level={10} characterClass="Mage" onSelect={handleSelect} />
+      <PlayerCard name="Alice" level={5} characterClass="Warrior" title="Guild Leader" isFeatured status="online" onSelect={handleSelect} />
+      <PlayerCard name="Bob" level={10} characterClass="Mage" status="offline" onSelect={handleSelect} />
     <br />
       <ActionButton label="Save Game" onAction={handleSave} />
       <ActionButton label="Load Game" onAction={handleLoad} />
