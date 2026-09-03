@@ -1,6 +1,7 @@
 import PlayerCard from './PlayerCard'
 import ActionButton from './ActionButton'
 import ScoreButton from './ScoreButton'
+import RewardCard from './RewardCard'
 import './App.css'
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
     console.log(`Scored ${points} points!`);
   }
 
+  const handleReward = (points: number) => {
+    console.log(`Claimed reward with ${points} points!`);
+  }
+
    return (
     <div>
       <PlayerCard name="Alice" level={5} characterClass="Warrior" title="Guild Leader" onSelect={handleSelect} />
@@ -31,7 +36,10 @@ function App() {
     <br />
       <ScoreButton points={5} onScore={handleScore} />
       <ScoreButton points={10} onScore={handleScore} />
-        
+
+    <br />
+      <RewardCard name="Epic Sword" points={50} onClaim={handleReward} /> 
+      <RewardCard name="Magic Wand" points={30} onClaim={handleReward} />
     </div>
   )
 }
