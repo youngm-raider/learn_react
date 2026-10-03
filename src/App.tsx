@@ -2,6 +2,7 @@ import PlayerCard from './PlayerCard'
 import ActionButton from './ActionButton'
 import ScoreButton from './ScoreButton'
 import RewardCard from './RewardCard'
+import Panel from './Panel'
 import './App.css'
 
 function App() {
@@ -40,6 +41,14 @@ function App() {
     <br />
       <RewardCard name="Epic Sword" points={50} onClaim={handleReward} /> 
       <RewardCard name="Magic Wand" points={30} onClaim={handleReward} />
+
+    <br />
+    <Panel title="Game Info">
+      <p>Welcome to the game! Select your player and start playing.</p>
+    </Panel>
+    <Panel title="A button to press">
+      <ActionButton label="Press Me" onAction={() => console.log('Button pressed!')} />
+    </Panel>
     </div>
   )
 }
