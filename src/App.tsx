@@ -3,6 +3,7 @@ import ActionButton from './ActionButton'
 import ScoreButton from './ScoreButton'
 import RewardCard from './RewardCard'
 import Panel from './Panel'
+import PlayerSummary from './PlayerSummary'
 import './App.css'
 
 function App() {
@@ -43,12 +44,14 @@ function App() {
       <RewardCard name="Magic Wand" points={30} onClaim={handleReward} />
 
     <br />
-    <Panel title="Game Info">
+    <Panel title="Game Info" footer={<button>Press this</button>}>
       <p>Welcome to the game! Select your player and start playing.</p>
     </Panel>
-    <Panel title="A button to press">
-      <ActionButton label="Press Me" onAction={() => console.log('Button pressed!')} />
+    <Panel title="A button to press" footer={<button>Also press me</button>}>
+    <p> Trying something new</p>
     </Panel>
+    <PlayerSummary player={{ name: "Alice", level: 5 }} />
+    <PlayerSummary player={{ name: "Bob", level: 10 }} />
     </div>
   )
 }
