@@ -4,7 +4,13 @@ interface TagLineProps {
 
 const TagLine = ({ tags }: TagLineProps) => {
     return (
-        <p>{tags.join(', ')}</p>
+        <div>
+        <ul>
+        {tags.map((tag, index) => (
+            <li key={index}>{tag}</li>
+        ))}
+        </ul>
+        </div>
     );
 };
 
