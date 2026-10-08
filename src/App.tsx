@@ -4,9 +4,13 @@ import ScoreButton from './ScoreButton'
 import RewardCard from './RewardCard'
 import Panel from './Panel'
 import PlayerSummary from './PlayerSummary'
+import TagLine from './Tagline'
 import './App.css'
 
 function App() {
+
+  const tag1: string[] = ["React", "TypeScript", "Vite"];
+  const tag2: string[] = ["JavaScript", "HTML", "CSS"];
 
   const handleSelect = (name: string) => {
     console.log(`Player selected: ${name}`);
@@ -52,6 +56,9 @@ function App() {
     </Panel>
     <PlayerSummary player={{ name: "Alice", level: 5 }} />
     <PlayerSummary player={{ name: "Bob", level: 10 }} />
+    <br />
+    <TagLine tags={tag1} />
+    <TagLine tags={tag2} />
     </div>
   )
 }
