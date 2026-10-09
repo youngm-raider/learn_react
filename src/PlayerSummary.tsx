@@ -3,7 +3,7 @@ interface Player {
     level: number;
 }
 
-interface PlayerSummaryProps {
+export interface PlayerSummaryProps {
     player: Player;
 }
 

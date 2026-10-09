@@ -6,8 +6,8 @@ const TagLine = ({ tags }: TagLineProps) => {
     return (
         <div>
         <ul>
-        {tags.map((tag, index) => (
-            <li key={index}>{tag}</li>
+        {tags.map((tag) => (
+            <li key={tag}>{tag}</li>
         ))}
         </ul>
         </div>

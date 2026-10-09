@@ -3,7 +3,7 @@ import ActionButton from './ActionButton'
 import ScoreButton from './ScoreButton'
 import RewardCard from './RewardCard'
 import Panel from './Panel'
-import PlayerSummary from './PlayerSummary'
+import PlayerSection from './PlayerSection'
 import TagLine from './Tagline'
 import './App.css'
 
@@ -54,8 +54,8 @@ function App() {
     <Panel title="A button to press" footer={<button>Also press me</button>}>
     <p> Trying something new</p>
     </Panel>
-    <PlayerSummary player={{ name: "Alice", level: 5 }} />
-    <PlayerSummary player={{ name: "Bob", level: 10 }} />
+    <PlayerSection player={{ name: "Alice", level: 5 }} />
+    <PlayerSection player={{ name: "Bob", level: 10 }} />
     <br />
     <TagLine tags={tag1} />
     <TagLine tags={tag2} />
