@@ -1,5 +1,5 @@
 interface TagLineProps {
-    tags: string[];
+    tags: {id: number, name: string }[];
 }
 
 const TagLine = ({ tags }: TagLineProps) => {
@@ -7,7 +7,7 @@ const TagLine = ({ tags }: TagLineProps) => {
         <div>
         <ul>
         {tags.map((tag) => (
-            <li key={tag}>{tag}</li>
+            <li key={tag.id}>{tag.name}</li>
         ))}
         </ul>
         </div>

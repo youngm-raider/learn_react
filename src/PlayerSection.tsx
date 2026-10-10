@@ -1,12 +1,20 @@
 import PlayerSummary from './PlayerSummary';
-import type { PlayerSummaryProps } from './PlayerSummary';
+import type { Player } from './PlayerSummary';
+
+export interface PlayerSectionProps {
+    players: Player[];
+}
 
 
-const PlayerSection = ({player}: PlayerSummaryProps) => {
+const PlayerSection = ({ players }: PlayerSectionProps) => {
     return (
-        <div style={{ border: '1px solid black', padding: '10px' }}>
-            Player Section
-            <PlayerSummary player={player} />
+        <div>
+            {players.map((player) => (
+                <div style={{ border: '1px solid black', padding: '10px', margin: '10px' }}>
+                    Player Section
+                    <PlayerSummary key={player.name} player={player} />
+                </div>
+            ))}
         </div>
     );
 };

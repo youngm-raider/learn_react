@@ -4,14 +4,19 @@ import ScoreButton from './ScoreButton'
 import RewardCard from './RewardCard'
 import Panel from './Panel'
 import PlayerSection from './PlayerSection'
+import type { Player } from './PlayerSummary'
 import TagLine from './Tagline'
 import './App.css'
 
 function App() {
 
-  const tag1: string[] = ["React", "TypeScript", "Vite"];
-  const tag2: string[] = ["JavaScript", "HTML", "CSS"];
+  const tag1: { id: number, name: string }[] = [{"id": 1, "name": "React"}, {"id": 2, "name": "TypeScript"}, {"id": 3, "name": "Vite"}];
+  const tag2: { id: number, name: string }[] = [{"id": 4, "name": "JavaScript"}, {"id": 5, "name": "HTML"}, {"id": 6, "name": "CSS"}];
 
+  const players: Player[] = [
+    { name: "Alice", level: 5 },
+    { name: "Bob", level: 10 }
+  ];
   const handleSelect = (name: string) => {
     console.log(`Player selected: ${name}`);
   }
@@ -54,8 +59,7 @@ function App() {
     <Panel title="A button to press" footer={<button>Also press me</button>}>
     <p> Trying something new</p>
     </Panel>
-    <PlayerSection player={{ name: "Alice", level: 5 }} />
-    <PlayerSection player={{ name: "Bob", level: 10 }} />
+    <PlayerSection players={players} />
     <br />
     <TagLine tags={tag1} />
     <TagLine tags={tag2} />
